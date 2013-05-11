@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91E0F77F-B3A7-4279-815A-478247D7DE86}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>MultiCombat</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="ZurasBot" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="MyTERA" />
+    <Reference Include="System.Drawing" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="MultiCombat\MultiCombat\Forms\ComboManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiCombat\MultiCombat\Forms\CastTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiCombat\MultiCombat\Classes\Loot.cs" />
+    <Compile Include="MultiCombat\MultiCombat\Classes\Inventory.cs" />
+    <Compile Include="MultiCombat\MultiCombat\Classes\Heal.cs" />
+    <Compile Include="MultiCombat\MultiCombat\Globals.cs" />
+    <Compile Include="MultiCombat\MultiCombat\Classes\Skill.cs" />
+    <Compile Include="MultiCombat\MultiCombat\Classes\Buff.cs" />
+    <Compile Include="MultiCombat\MultiCombat\Classes\Settings.cs" />
+    <Compile Include="MultiCombat\MultiCombat\Classes\Player.cs" />
+    <Compile Include="MultiCombat\MultiCombat\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiCombat\MultiCombat\EntryPoint.cs" />
+    <Compile Include="MultiCombat\MultiCombat\Classes\Combos.cs" />
+    <EmbeddedResource Include="MultiCombat.MultiCombat.Forms.ComboManager.resources" />
+    <EmbeddedResource Include="MultiCombat.MultiCombat.Forms.CastTime.resources" />
+    <EmbeddedResource Include="MultiCombat.MultiCombat.Settings.resources" />
+  </ItemGroup>
+</Project>
